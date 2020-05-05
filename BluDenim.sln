@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluDenim", "BluDenim.csproj", "{20CBC8CD-8683-4596-9221-E6A8A7BE6535}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20CBC8CD-8683-4596-9221-E6A8A7BE6535}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20CBC8CD-8683-4596-9221-E6A8A7BE6535}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20CBC8CD-8683-4596-9221-E6A8A7BE6535}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20CBC8CD-8683-4596-9221-E6A8A7BE6535}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B0279C6-95E6-4DF0-9CC7-D6F61D6D39F0}
+	EndGlobalSection
+EndGlobal
