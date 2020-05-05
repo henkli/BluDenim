@@ -15,8 +15,8 @@ namespace BluDenim
 
         static void Pull()
         {
-            const string UserFullname = "Henrik Klinkmann";
-            const string UserEmail = "hkl@iki.fi";
+            const string UserFullname = "H K";
+            const string UserEmail = "anon@temp-mail.mx";
 
             using var repo = new Repository(@"c:\git\BluDenim");
 
