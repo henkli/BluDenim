@@ -38,7 +38,14 @@ namespace BluDenim
             var signature = new Signature(new Identity(UserFullname, UserEmail), DateTimeOffset.Now);
 
             // Pull
-            Commands.Pull(repo, signature, options);
+            try
+            {
+                var result = Commands.Pull(repo, signature, options);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Could not pull. Merge conflict");
+            }
         }
     }
 }
