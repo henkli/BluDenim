@@ -10,7 +10,7 @@ namespace BluDenim
         {
             Console.WriteLine("Hello World!");
 
-
+            Pull();
         }
 
         static void Pull()
