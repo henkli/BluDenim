@@ -55,6 +55,10 @@ namespace BluDenim
             {
                 Console.WriteLine($"Could not pull '{path}'. {e.Message}");
             }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Could not pull '{path}'. [{e.GetType()}]{e.Message}");
+            }
         }
     }
 }
