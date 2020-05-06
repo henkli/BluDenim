@@ -10,15 +10,15 @@ namespace BluDenim
         {
             Console.WriteLine("Hello World!");
 
-            Pull();
+            Pull(@"c:\git\BluDenim");
         }
 
-        static void Pull()
+        static void Pull(string path)
         {
             const string UserFullname = "H K";
-            const string UserEmail = "anon@temp-mail.mbx";
+            const string UserEmail = "anon@temp-mail.mbbx";
 
-            using var repo = new Repository(@"c:\git\BluDenim");
+            using var repo = new Repository(path);
 
             // Credential information to fetch
             var options = new PullOptions
@@ -37,14 +37,23 @@ namespace BluDenim
             // User information to create a merge commit
             var signature = new Signature(new Identity(UserFullname, UserEmail), DateTimeOffset.Now);
 
+            // Status
+            var repoStatus = repo.RetrieveStatus(new StatusOptions());
+            
+            if (repoStatus.IsDirty)
+            {
+                Console.WriteLine($"Local repository '{path}' is dirty. Will not pull.");
+                return;
+            }
+
             // Pull
             try
             {
                 var result = Commands.Pull(repo, signature, options);
             }
-            catch (Exception e)
+            catch (CheckoutConflictException e)
             {
-                Console.WriteLine("Could not pull. Merge conflict");
+                Console.WriteLine($"Could not pull '{path}'. {e.Message}");
             }
         }
     }
